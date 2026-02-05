@@ -1,0 +1,28 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/GameModeBase.h"
+#include "Logging/StructuredLog.h"
+#include "HUD/GameHUD.h"
+#include "Kismet/GameplayStatics.h"
+#include "Player/FPSCharacter.h"
+#include "FPSProjectGameMode.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class VGP221WINTER2026_API AFPSProjectGameMode : public AGameModeBase
+{
+	GENERATED_BODY()
+	
+	virtual void StartPlay() override;
+
+	UFUNCTION()
+	void HandlePlayerDied();
+
+	UFUNCTION()
+	void GoToGameOver();
+};
